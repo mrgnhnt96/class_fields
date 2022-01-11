@@ -11,7 +11,6 @@ void main() {
         'basic',
         builder: fieldKeysBuilder,
         builderOptions: Settings.debug(),
-        extension: '.keys.dart',
       );
     },
   );
