@@ -12,7 +12,8 @@ class Field {
   /// {@template field}
   const Field({
     required this.name,
-  });
+    required String? key,
+  }) : key = key ?? name;
 
   /// gets the field from the [FieldElement]
   factory Field.fromElement(FieldElement element) {
@@ -38,13 +39,19 @@ class Field {
       }
     }
 
-    final name = checkForKey(element.metadata) ?? element.name;
-
-    return Field(name: name);
+    return Field(
+      name: element.name,
+      key: checkForKey(element.metadata),
+    );
   }
 
   /// the name of the field
   final String name;
+
+  /// the key of the field
+  ///
+  /// set to [name] if not set
+  final String key;
 
   /// gets all the fields from the [FieldElement]s
   static Iterable<Field> fromElements(Iterable<FieldElement> elements) sync* {

@@ -33,6 +33,6 @@ extension on Class {
 
 extension on Iterable<Field> {
   Iterable<String> get instanciators {
-    return map((field) => "final ${field.name} = '${field.name}';");
+    return map((field) => "final ${field.name} = '${field.key}';");
   }
 }
