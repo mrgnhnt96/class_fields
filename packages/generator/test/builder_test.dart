@@ -4,14 +4,22 @@ import 'package:generator_test/generator_test.dart';
 import 'package:test/test.dart';
 
 void main() {
-  test(
-    'Successfully generates',
-    () async {
-      await testPackageBuilder(
-        'basic',
-        builder: fieldKeysBuilder,
-        builderOptions: Settings.debug(),
-      );
-    },
-  );
+  const files = [
+    'basic',
+    'with_getter',
+    'with_static',
+  ];
+
+  for (final file in files) {
+    test(
+      'Successfully generates $file',
+      () async {
+        await testPackageBuilder(
+          file,
+          builder: fieldKeysBuilder,
+          builderOptions: Settings.debug(),
+        );
+      },
+    );
+  }
 }
