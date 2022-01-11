@@ -15,7 +15,7 @@ Builder fieldKeysBuilder(BuilderOptions options) {
 
   return PartBuilder(
     [const FieldKeysGenerator()],
-    'keys.dart',
+    '.keys.dart',
     formatOutput: formatter,
   );
 }
