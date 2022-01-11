@@ -26,6 +26,13 @@ class Field {
     }
 
     for (final element in elements) {
+      // [element.isSynthetic] is true for fields that are
+      // declared getters
+      // Ignore all static fields
+      if (element.isSynthetic || element.isStatic) {
+        continue;
+      }
+
       yield Field.fromElement(element);
     }
   }
