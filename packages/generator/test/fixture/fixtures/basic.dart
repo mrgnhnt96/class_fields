@@ -10,5 +10,5 @@ class _$ExampleFieldKeys {
   const _$ExampleFieldKeys();
 
   final name = 'name';
-  final age = 'age';
+  final age = '_age';
 }

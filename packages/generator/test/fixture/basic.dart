@@ -10,6 +10,7 @@ class Example {
   });
 
   final String name;
+  @FieldKey('_age')
   final int age;
 
   static const keys = _$ExampleFieldKeys();
