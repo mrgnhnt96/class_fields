@@ -6,6 +6,7 @@ import 'package:test/test.dart';
 void main() {
   const files = [
     'basic',
+    'private',
     'with_getter',
     'with_static',
     'with_key_annotation',
