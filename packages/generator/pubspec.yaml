@@ -20,5 +20,6 @@ dependencies:
 dev_dependencies:
   generator_test:
     git: https://github.com/mrgnhnt96/generator_test
+  json_annotation: ^4.4.0
   test: ^1.16.0
   very_good_analysis: ^2.4.0
