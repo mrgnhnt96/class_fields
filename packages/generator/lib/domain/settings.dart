@@ -12,7 +12,7 @@ class Settings {
   /// constructs a [Settings] from the build.yaml file
   factory Settings.fromConfig(Map<String, dynamic> json) {
     return Settings(
-      formatOuput: json['format_ouput'] as bool? ?? false,
+      formatOuput: json['format_output'] as bool? ?? false,
     );
   }
 
@@ -27,7 +27,7 @@ class Settings {
 
   Map<String, dynamic> _toJson() {
     return <String, dynamic>{
-      'format_ouput': formatOuput,
+      'format_output': formatOuput,
     };
   }
 }
