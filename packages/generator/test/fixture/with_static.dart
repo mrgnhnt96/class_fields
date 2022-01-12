@@ -3,8 +3,8 @@ import 'package:field_keys_annotation/field_keys.dart';
 part './fixtures/with_static.dart';
 
 @fieldKeys
-class Example {
-  const Example({
+class Person {
+  const Person({
     required this.name,
     required this.age,
   });
@@ -14,5 +14,5 @@ class Example {
 
   static String get option => 'Other';
 
-  static const keys = _$ExampleFieldKeys();
+  static const keys = _$PersonFieldKeys();
 }

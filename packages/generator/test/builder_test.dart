@@ -8,6 +8,7 @@ void main() {
     'basic',
     'with_getter',
     'with_static',
+    'with_key_annotation',
   ];
 
   for (final file in files) {

@@ -6,8 +6,8 @@ part of '../with_getter.dart';
 // FieldKeysGenerator
 // **************************************************************************
 
-class _$ExampleFieldKeys {
-  const _$ExampleFieldKeys();
+class _$PersonFieldKeys {
+  const _$PersonFieldKeys();
 
   final name = 'name';
   final age = 'age';

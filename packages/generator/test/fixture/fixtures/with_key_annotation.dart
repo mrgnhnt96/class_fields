@@ -1,6 +1,6 @@
 // ignore_for_file: avoid_field_initializers_in_const_classes
 
-part of '../basic.dart';
+part of '../with_key_annotation.dart';
 
 // **************************************************************************
 // FieldKeysGenerator
@@ -9,6 +9,6 @@ part of '../basic.dart';
 class _$PersonFieldKeys {
   const _$PersonFieldKeys();
 
-  final name = 'name';
-  final age = 'age';
+  final name = 'something_cooler';
+  final age = 'edad';
 }
