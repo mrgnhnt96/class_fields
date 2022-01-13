@@ -1,7 +1,7 @@
 targets:
   $default:
     builders:
-      field_keys:
+      fields:
         enabled: true
         options:
           format_output: true

@@ -1,8 +1,8 @@
-import 'package:field_keys_annotation/field_keys.dart';
+import 'package:fields_annotation/fields.dart';
 
 part './fixtures/basic.dart';
 
-@fieldKeys
+@fields
 class Person {
   const Person({
     required this.name,
@@ -12,5 +12,5 @@ class Person {
   final String name;
   final int age;
 
-  static const keys = _$PersonFieldKeys();
+  static const fields = _$PersonFields();
 }

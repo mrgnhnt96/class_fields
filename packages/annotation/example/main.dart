@@ -1,6 +1,7 @@
-import 'package:field_keys_annotation/field_keys.dart';
+// ignore: avoid_relative_lib_imports
+import '../lib/fields.dart';
 
-@fieldKeys
+@fields
 class MyClass {
   const MyClass({
     required this.name,

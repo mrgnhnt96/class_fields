@@ -2,18 +2,18 @@
 
 import 'package:analyzer/dart/element/element.dart';
 import 'package:build/build.dart';
-import 'package:field_keys/domain/class.dart';
-import 'package:field_keys/templates/field_keys_template.dart';
-import 'package:field_keys_annotation/src/field_keys_base.dart';
+import 'package:fields/domain/class.dart';
+import 'package:fields/templates/fields_template.dart';
+import 'package:fields_annotation/src/fields.dart';
 import 'package:source_gen/source_gen.dart';
 
-/// {@template field_keys_generator}
+/// {@template fields_generator}
 /// A [Generator] that generates all keys for fields
-/// from the [FieldKeys] annotation
+/// from the [Fields] annotation
 /// {@endtemplate}
-class FieldKeysGenerator extends GeneratorForAnnotation<FieldKeys> {
-  /// {@macro field_keys_generator}
-  const FieldKeysGenerator();
+class FieldsGenerator extends GeneratorForAnnotation<Fields> {
+  /// {@macro fields_generator}
+  const FieldsGenerator();
 
   @override
   String generateForAnnotatedElement(
@@ -32,7 +32,7 @@ class FieldKeysGenerator extends GeneratorForAnnotation<FieldKeys> {
 
     final subject = Class.fromElement(element);
 
-    FieldKeysTemplate(subject).addToBuffer(buffer);
+    FieldsTemplate(subject).addToBuffer(buffer);
 
     return buffer.toString();
   }

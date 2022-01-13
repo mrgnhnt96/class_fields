@@ -2,7 +2,7 @@
 
 import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/src/dart/element/element.dart';
-import 'package:field_keys_annotation/field_keys.dart';
+import 'package:fields_annotation/fields.dart';
 import 'package:source_gen/source_gen.dart';
 
 /// {@template field}
@@ -33,7 +33,7 @@ class Field {
       for (final annotation in annotations) {
         if (annotation.astName == 'JsonKey') {
           return getName(annotation, 'name');
-        } else if (annotation.astName == '$FieldKey') {
+        } else if (annotation.astName == '$Field') {
           return getName(annotation, 'key');
         }
       }
@@ -47,6 +47,11 @@ class Field {
 
   /// the name of the field
   final String name;
+
+  /// the name of the field, removing all `_`
+  String get cleanName {
+    return name.replaceAll(RegExp('^_*'), '');
+  }
 
   /// the key of the field
   ///

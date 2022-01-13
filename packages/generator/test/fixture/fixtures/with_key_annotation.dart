@@ -3,11 +3,11 @@
 part of '../with_key_annotation.dart';
 
 // **************************************************************************
-// FieldKeysGenerator
+// FieldsGenerator
 // **************************************************************************
 
-class _$PersonFieldKeys {
-  const _$PersonFieldKeys();
+class _$PersonFields {
+  const _$PersonFields();
 
   final name = 'something_cooler';
   final age = 'edad';

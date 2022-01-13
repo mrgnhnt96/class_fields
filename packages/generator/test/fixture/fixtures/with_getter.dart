@@ -3,11 +3,11 @@
 part of '../with_getter.dart';
 
 // **************************************************************************
-// FieldKeysGenerator
+// FieldsGenerator
 // **************************************************************************
 
-class _$PersonFieldKeys {
-  const _$PersonFieldKeys();
+class _$PersonFields {
+  const _$PersonFields();
 
   final name = 'name';
   final age = 'age';

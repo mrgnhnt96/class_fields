@@ -1,5 +1,5 @@
-name: field_keys
-description: Generate keys from field names to use within Maps
+name: fields
+description: Generate all field names as Strings to use within Maps, serialization, etc.
 version: 0.0.1
 publish_to: none
 # homepage: https://www.example.com
@@ -11,7 +11,7 @@ environment:
 dependencies:
   analyzer: ^3.0.0
   build_config: ^1.0.0
-  field_keys_annotation:
+  fields_annotation:
     path: ../annotation
   meta: ^1.7.0
   source_gen: ^1.2.1

@@ -1,8 +1,8 @@
-import 'package:field_keys_annotation/field_keys.dart';
+import 'package:fields_annotation/fields.dart';
 
-part 'main.keys.dart';
+part 'main.f.dart';
 
-@fieldKeys
+@fields
 class Example {
   const Example({
     required String name,
@@ -18,5 +18,5 @@ class Example {
   final DateTime date;
   final double price;
 
-  static const keys = _$ExampleFieldKeys();
+  static const fields = _$ExampleFields();
 }

@@ -1,10 +1,10 @@
 import 'package:build/build.dart';
-import 'package:field_keys/domain/settings.dart';
-import 'package:field_keys/src/generator.dart';
+import 'package:fields/domain/settings.dart';
+import 'package:fields/src/generator.dart';
 import 'package:source_gen/source_gen.dart';
 
 /// Not meant to be invoked by hand-authored code.
-Builder fieldKeysBuilder(BuilderOptions options) {
+Builder fieldsBuilder(BuilderOptions options) {
   final settings = Settings.fromConfig(options.config);
 
   Formatter? formatter = (s) => s;
@@ -14,8 +14,8 @@ Builder fieldKeysBuilder(BuilderOptions options) {
   }
 
   return PartBuilder(
-    [const FieldKeysGenerator()],
-    '.keys.dart',
+    [const FieldsGenerator()],
+    '.f.dart',
     formatOutput: formatter,
     header: '''
 // ignore_for_file: avoid_field_initializers_in_const_classes

@@ -1,14 +1,14 @@
-import 'package:field_keys/domain/class.dart';
-import 'package:field_keys/domain/field.dart';
-import 'package:field_keys/templates/template.dart';
-import 'package:field_keys/util/string_buffer_ext.dart';
+import 'package:fields/domain/class.dart';
+import 'package:fields/domain/field.dart';
+import 'package:fields/templates/template.dart';
+import 'package:fields/util/string_buffer_ext.dart';
 
-/// {@template field_keys_template}
+/// {@template fields_template}
 /// The template for the field keys
 /// {@endtemplate}
-class FieldKeysTemplate extends Template {
-  /// {@macro field_keys_template}
-  const FieldKeysTemplate(Class subject) : super(subject);
+class FieldsTemplate extends Template {
+  /// {@macro fields_template}
+  const FieldsTemplate(Class subject) : super(subject);
 
   @override
   void generate(StringBuffer buffer) {
@@ -27,12 +27,12 @@ class FieldKeysTemplate extends Template {
 
 extension on Class {
   String get genName {
-    return '_\$${name}FieldKeys';
+    return '_\$${name}Fields';
   }
 }
 
 extension on Iterable<Field> {
   Iterable<String> get instanciators {
-    return map((field) => "final ${field.name} = '${field.key}';");
+    return map((field) => "final ${field.cleanName} = '${field.key}';");
   }
 }

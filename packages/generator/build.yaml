@@ -1,10 +1,10 @@
 builders:
-  field_keys:
-    import: "package:field_keys/field_keys.dart"
+  fields:
+    import: "package:fields/fields.dart"
     builder_factories:
-      - fieldKeysBuilder
+      - fieldsBuilder
     build_extensions:
       .dart:
-        - .keys.dart
+        - .f.dart
     auto_apply: dependents
     build_to: source

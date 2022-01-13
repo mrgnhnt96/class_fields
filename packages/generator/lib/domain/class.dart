@@ -1,8 +1,8 @@
 import 'package:analyzer/dart/element/element.dart';
-import 'package:field_keys/domain/field.dart';
+import 'package:fields/domain/field.dart';
 
 /// {@template class}
-/// The subject of the `FieldKeys` annotation
+/// The subject of the `Fields` annotation
 /// {@endtemplate}
 class Class {
   /// {@macro class}

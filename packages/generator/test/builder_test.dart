@@ -1,5 +1,5 @@
-import 'package:field_keys/domain/settings.dart';
-import 'package:field_keys/field_keys.dart';
+import 'package:fields/domain/settings.dart';
+import 'package:fields/fields.dart';
 import 'package:generator_test/generator_test.dart';
 import 'package:test/test.dart';
 
@@ -18,7 +18,7 @@ void main() {
       () async {
         await testPackageBuilder(
           file,
-          builder: fieldKeysBuilder,
+          builder: fieldsBuilder,
           builderOptions: Settings.debug(),
         );
       },

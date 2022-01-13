@@ -3,13 +3,13 @@
 part of 'main.dart';
 
 // **************************************************************************
-// FieldKeysGenerator
+// FieldsGenerator
 // **************************************************************************
 
-class _$ExampleFieldKeys {
-  const _$ExampleFieldKeys();
+class _$ExampleFields {
+  const _$ExampleFields();
 
-  final _name = '_name';
+  final name = '_name';
   final code = 'code';
   final description = 'description';
   final date = 'date';

@@ -5,10 +5,10 @@ environment:
 
 
 dependencies:
-  field_keys_annotation:
+  fields_annotation:
     path: ../../annotation
 
 dev_dependencies:
   build_runner: ^2.1.7
-  field_keys:
+  fields:
     path: ../

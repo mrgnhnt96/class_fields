@@ -1,5 +1,5 @@
-name: field_keys_annotation
-description: The annotation package for the field_keys generator. Generate all String keys from field names
+name: fields_annotation
+description: The annotation package for the fields generator. Generate all field names as Strings
 version: 0.0.1
 publish_to: none
 

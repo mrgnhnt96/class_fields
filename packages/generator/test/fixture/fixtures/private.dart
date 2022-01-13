@@ -3,11 +3,11 @@
 part of '../private.dart';
 
 // **************************************************************************
-// FieldKeysGenerator
+// FieldsGenerator
 // **************************************************************************
 
-class _$PersonFieldKeys {
-  const _$PersonFieldKeys();
+class _$PersonFields {
+  const _$PersonFields();
 
   final name = '_name';
   final age = '_age';

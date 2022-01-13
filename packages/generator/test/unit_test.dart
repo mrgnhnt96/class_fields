@@ -12,7 +12,7 @@ void main() {
       groupName: 'basic',
       type: i1.Person,
       checkKeyValues: () {
-        const keys = i1.Person.keys;
+        const keys = i1.Person.fields;
 
         expect(keys.name, 'name');
         expect(keys.age, 'age');
@@ -22,7 +22,7 @@ void main() {
       groupName: 'with_getter',
       type: i2.Person,
       checkKeyValues: () {
-        const keys = i2.Person.keys;
+        const keys = i2.Person.fields;
 
         expect(keys.name, 'name');
         expect(keys.age, 'age');
@@ -32,7 +32,7 @@ void main() {
       groupName: 'with_static',
       type: i3.Person,
       checkKeyValues: () {
-        const keys = i3.Person.keys;
+        const keys = i3.Person.fields;
 
         expect(keys.name, 'name');
         expect(keys.age, 'age');
@@ -42,7 +42,7 @@ void main() {
       groupName: 'with_key_annotation',
       type: i4.Person,
       checkKeyValues: () {
-        const keys = i4.Person.keys;
+        const keys = i4.Person.fields;
 
         expect(keys.name, 'something_cooler');
         expect(keys.age, 'edad');
@@ -61,7 +61,7 @@ class UnitTest {
     required this.checkKeyValues,
     required this.groupName,
     String? keysName,
-  }) : keysName = keysName ?? 'keys';
+  }) : keysName = keysName ?? 'fields';
 
   final Type type;
   final void Function() checkKeyValues;

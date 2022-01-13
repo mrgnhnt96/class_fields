@@ -6,7 +6,7 @@ bool mappedAllFields(Type classType, String keysFieldName) {
   final keys = subject.staticMembers[Symbol(keysFieldName)];
 
   if (keys == null) {
-    throw Exception('No keys found');
+    throw Exception('No fields found');
   }
 
   final subjectKeys = subject.declarations.values.where((e) {
@@ -17,23 +17,23 @@ bool mappedAllFields(Type classType, String keysFieldName) {
     return !e.isStatic;
   });
 
-  final fieldKeys = (keys.returnType as ClassMirror)
+  final fields = (keys.returnType as ClassMirror)
       .declarations
       .values
       .whereType<VariableMirror>()
       .toList();
 
   for (final key in subjectKeys) {
-    final index = fieldKeys.simpleIndex(key);
+    final index = fields.simpleIndex(key);
     if (index == -1) {
       return false;
     }
 
-    fieldKeys.removeAt(index);
+    fields.removeAt(index);
     continue;
   }
 
-  if (fieldKeys.isNotEmpty) {
+  if (fields.isNotEmpty) {
     return false;
   }
 
