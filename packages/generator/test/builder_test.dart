@@ -16,11 +16,15 @@ void main() {
     test(
       'Successfully generates $file',
       () async {
-        await testPackageBuilder(
+        final tester = GeneratorTester.fromBuilder(
           file,
-          builder: fieldsBuilder,
-          builderOptions: Settings.debug(),
+          fieldsBuilder,
+          onLog: print,
+          logLevel: Level.ALL,
+          options: Settings.debug(),
         );
+
+        await tester.test();
       },
     );
   }
