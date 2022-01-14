@@ -17,3 +17,6 @@ dev_dependencies:
   very_good_analysis: ^2.4.0
 
 scripts: ../../derry.yaml
+
+import_sorter:
+  comments: false
