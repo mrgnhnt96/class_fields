@@ -13,3 +13,5 @@ dev_dependencies:
   build_runner: ^2.1.7
   class_fields:
     path: ../
+
+scripts: ../../../derry.yaml

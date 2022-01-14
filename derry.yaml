@@ -1,0 +1,28 @@
+bbuild: dart run build_runner build --delete-conflicting-outputs
+
+bwatch: dart run build_runner watch --delete-conflicting-outputs
+
+bclean: dart run build_runner clean build
+
+clean:
+  - dart pub upgrade
+  - dart pub get
+
+sort: dart pub global run import_sorter:main
+
+prep:
+  - flutter format lib test
+  - $sort
+
+coverage:
+  - format_coverage --lcov --in=coverage --out=coverage/lcov.info --packages=.packages --report-on=lib
+  - genhtml coverage/lcov.info -o coverage
+  - open coverage/index.html
+
+runtests:
+  - dart run test --coverage coverage -r expanded --test-randomize-ordering-seed random --timeout 60s
+  - $coverage
+
+publish:
+  - cd ../class_fields && pub publish
+  - cd ../class_fields_annotation && pub publish

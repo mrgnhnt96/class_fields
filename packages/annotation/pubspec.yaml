@@ -15,3 +15,5 @@ dependencies:
 dev_dependencies:
   test: ^1.16.0
   very_good_analysis: ^2.4.0
+
+scripts: ../../derry.yaml
