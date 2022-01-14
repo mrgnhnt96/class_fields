@@ -1,39 +1,104 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+<p align="center">
+<h1 align="center">Class Fields</h1>
+<h3 align="center">Generate all field names as Strings to use within Maps, serialization, etc!</h3>
+</p>
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+<p align="center">
+<a href="https://pub.dev/packages/class_fields"><img src="https://img.shields.io/pub/v/class_fields.svg" ></a>
+<a href="https://github.com/mrgnhnt96/class_fields"><img src="https://img.shields.io/github/stars/mrgnhnt96/class_fields.svg?style=flat&logo=github&colorB=deeppink&label=stars" ></a>
+<a href="https://pub.dev/packages/very_good_analysis"><img src="https://img.shields.io/badge/style-very_good_analysis-B22C89.svg" ></a>
+<a href="https://github.com/tenhobi/effective_dart"><img src="https://img.shields.io/badge/style-effective_dart-40c4ff.svg" ></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" ></a>
+</p>
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+# Purpose
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+When serializing to & from json, you need to provide the field names as `String`s for the keys to the map. Strings are great! ... just make sure to have the right format, you don't have any typos, and that if you ever update the string, that you don't forget to update all the places that also use that same string!
 
-## Features
+`class_fields` is a library that generates all the field names to help you keep your code DRY and type safe. `class_fields` creates a single reference point that can be used throughout your codebase.
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+# Usage
 
-## Getting started
+## Depend on it
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add `class_fields` and [`class_fields_annotations`][annotation] within your `pubspec.yaml`
 
-## Usage
+```yaml
+# annotations belong in the dependencies because they are used within your code
+dependencies:
+  class_fields_annotations: [recent_version]
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
-```dart
-const like = 'sample';
+# class_fields is only used to generate the code, and is not used within your codebase
+# so it belongs in the dev_dependencies
+dev_dependencies:
+  class_fields: [recent_version]
+  # needed to use class_fields
+  build_runner: [recent_cersion]
 ```
 
-## Additional information
+## Use it
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+### Add the part file
+
+```dart
+part 'main.f.dart';
+```
+
+### Annotate your class
+
+Decorate your class with the `@fields` annotation
+
+```dart
+@fields
+class Person {
+  const Person({
+    required this.name,
+    required this.age,
+  });
+
+  final String name;
+  final int age;
+}
+```
+
+### Run the [build_runner]
+
+```bash
+# run once
+flutter packages pub run build_runner build --delete-conflicting-outputs
+
+# run and listen to changes
+flutter packages pub run build_runner watch --delete-conflicting-outputs
+
+```
+
+### Use the generated code
+
+```dart
+// generated code
+class _$PersonFields {
+  const _$PersonFields();
+
+  final name = 'name';
+  final age = 'age';
+}
+```
+
+```dart
+class Person {
+  ...
+
+// add a static instance of the generated class
+static const fields = _$PersonFields();
+}
+```
+
+```dart
+// somewhere in your code
+final value = map[Person.fields.name];
+
+map[Person.fields.name] = value
+```
+
+[annotation]: https://pub.dev/packages/class_fields_annotation
+[build_runner]: https://pub.dev/packages/build_runner
