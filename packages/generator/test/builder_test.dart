@@ -16,7 +16,7 @@ void main() {
     test(
       'Successfully generates $file',
       () async {
-        final tester = GeneratorTester.fromBuilder(
+        final tester = SuccessGenerator.fromBuilder(
           file,
           fieldsBuilder,
           onLog: print,
