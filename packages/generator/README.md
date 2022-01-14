@@ -4,6 +4,7 @@
 </p>
 
 <p align="center">
+<a href="https://codecov.io/gh/mrgnhnt96/class_fields"><img src="https://codecov.io/gh/mrgnhnt96/class_fields/branch/master/graph/badge.svg?token=14TUA9TW6W"/></a>    
 <a href="https://pub.dev/packages/class_fields"><img src="https://img.shields.io/pub/v/class_fields.svg" ></a>
 <a href="https://github.com/mrgnhnt96/class_fields"><img src="https://img.shields.io/github/stars/mrgnhnt96/class_fields.svg?style=flat&logo=github&colorB=deeppink&label=stars" ></a>
 <a href="https://pub.dev/packages/very_good_analysis"><img src="https://img.shields.io/badge/style-very_good_analysis-B22C89.svg" ></a>
