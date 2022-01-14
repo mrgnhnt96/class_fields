@@ -1,10 +1,8 @@
-// ignore_for_file: avoid_field_initializers_in_const_classes
-
-part of '../basic.dart';
-
 // **************************************************************************
 // FieldsGenerator
 // **************************************************************************
+
+part of '../basic.dart';
 
 class _$PersonFields {
   const _$PersonFields();
