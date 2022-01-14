@@ -1,4 +1,5 @@
 import 'package:fields_annotation/fields.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 part 'main.f.dart';
 
@@ -14,8 +15,12 @@ class Example {
 
   final String _name;
   final int code;
+
+  @Field('desc')
   final String description;
   final DateTime date;
+
+  @JsonKey(name: 'money')
   final double price;
 
   static const fields = _$ExampleFields();

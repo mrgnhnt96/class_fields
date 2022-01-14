@@ -11,7 +11,7 @@ class _$ExampleFields {
 
   final name = '_name';
   final code = 'code';
-  final description = 'description';
+  final description = 'desc';
   final date = 'date';
-  final price = 'price';
+  final price = 'money';
 }
