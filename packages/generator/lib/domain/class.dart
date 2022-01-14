@@ -1,4 +1,5 @@
 import 'package:analyzer/dart/element/element.dart';
+
 import 'package:class_fields/domain/field.dart';
 
 /// {@template class}
