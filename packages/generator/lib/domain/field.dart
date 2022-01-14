@@ -2,7 +2,7 @@
 
 import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/src/dart/element/element.dart';
-import 'package:fields_annotation/fields.dart';
+import 'package:fields_annotation/fields_annotation.dart';
 import 'package:source_gen/source_gen.dart';
 
 /// {@template field}

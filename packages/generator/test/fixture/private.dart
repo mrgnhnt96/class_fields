@@ -1,4 +1,4 @@
-import 'package:fields_annotation/fields.dart';
+import 'package:fields_annotation/fields_annotation.dart';
 
 part './fixtures/private.dart';
 

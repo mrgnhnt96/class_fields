@@ -1,5 +1,4 @@
-// ignore: avoid_relative_lib_imports
-import '../lib/fields.dart';
+import 'package:fields_annotation/fields_annotation.dart';
 
 @fields
 class MyClass {
