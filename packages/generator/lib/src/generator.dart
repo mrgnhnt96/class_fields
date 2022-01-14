@@ -2,9 +2,9 @@
 
 import 'package:analyzer/dart/element/element.dart';
 import 'package:build/build.dart';
-import 'package:fields/domain/class.dart';
-import 'package:fields/templates/fields_template.dart';
-import 'package:fields_annotation/src/fields.dart';
+import 'package:class_fields/domain/class.dart';
+import 'package:class_fields/templates/fields_template.dart';
+import 'package:class_fields_annotation/src/fields.dart';
 import 'package:source_gen/source_gen.dart';
 
 /// {@template fields_generator}

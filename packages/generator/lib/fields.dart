@@ -1,6 +1,6 @@
 import 'package:build/build.dart';
-import 'package:fields/domain/settings.dart';
-import 'package:fields/src/generator.dart';
+import 'package:class_fields/domain/settings.dart';
+import 'package:class_fields/src/generator.dart';
 import 'package:source_gen/source_gen.dart';
 
 /// Not meant to be invoked by hand-authored code.

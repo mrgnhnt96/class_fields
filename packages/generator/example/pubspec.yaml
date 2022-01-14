@@ -5,11 +5,11 @@ environment:
 
 
 dependencies:
-  fields_annotation:
+  class_fields_annotation:
     path: ../../annotation
   json_annotation: ^4.4.0
 
 dev_dependencies:
   build_runner: ^2.1.7
-  fields:
+  class_fields:
     path: ../

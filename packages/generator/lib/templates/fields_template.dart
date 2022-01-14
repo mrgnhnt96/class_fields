@@ -1,7 +1,7 @@
-import 'package:fields/domain/class.dart';
-import 'package:fields/domain/field.dart';
-import 'package:fields/templates/template.dart';
-import 'package:fields/util/string_buffer_ext.dart';
+import 'package:class_fields/domain/class.dart';
+import 'package:class_fields/domain/field.dart';
+import 'package:class_fields/templates/template.dart';
+import 'package:class_fields/util/string_buffer_ext.dart';
 
 /// {@template fields_template}
 /// The template for the field keys

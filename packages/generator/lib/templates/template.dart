@@ -1,4 +1,4 @@
-import 'package:fields/domain/class.dart';
+import 'package:class_fields/domain/class.dart';
 
 ///{@template template}
 /// The interface for all templates

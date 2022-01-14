@@ -1,4 +1,4 @@
-import 'package:fields_annotation/fields_annotation.dart';
+import 'package:class_fields_annotation/class_fields_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part './fixtures/with_key_annotation.dart';

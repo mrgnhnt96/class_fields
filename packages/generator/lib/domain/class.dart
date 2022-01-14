@@ -1,5 +1,5 @@
 import 'package:analyzer/dart/element/element.dart';
-import 'package:fields/domain/field.dart';
+import 'package:class_fields/domain/field.dart';
 
 /// {@template class}
 /// The subject of the `Fields` annotation
