@@ -1,7 +1,6 @@
 name: class_fields_annotation
 description: The annotation package for the fields generator. Generate all field names as Strings
-version: 0.0.1
-publish_to: none
+version: 0.1.0
 repository: https://github.com/mrgnhnt96/class_fields/tree/master/packages/annotation
 homepage: https://github.com/mrgnhnt96/class_fields
 

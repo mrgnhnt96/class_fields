@@ -1,7 +1,6 @@
 name: class_fields
 description: Generate all field names as Strings to use within Maps, serialization, etc.
-version: 0.0.1
-publish_to: none
+version: 0.1.0
 repository: https://github.com/mrgnhnt96/class_fields/tree/master/packages/annotation
 homepage: https://github.com/mrgnhnt96/class_fields
 
@@ -11,6 +10,7 @@ environment:
 dependencies:
   analyzer: ^3.1.0
   build_config: ^1.0.0
+  # class_fields_annotation: ">=0.1.0 <0.2.0"
   class_fields_annotation:
     path: ../annotation
   meta: ^1.7.0
@@ -18,8 +18,7 @@ dependencies:
   source_helper: ^1.3.1
 
 dev_dependencies:
-  generator_test:
-    git: https://github.com/mrgnhnt96/generator_test
+  generator_test: ^0.1.0
   json_annotation: ^4.4.0
   test: ^1.16.0
   very_good_analysis: ^2.4.0
