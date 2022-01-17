@@ -5,8 +5,9 @@ environment:
 
 
 dependencies:
-  class_fields_annotation:
-    path: ../../annotation
+  class_fields_annotation: ^0.1.0
+  # class_fields_annotation:
+  #   path: ../../class_fields_annotation
   json_annotation: ^4.4.0
 
 dev_dependencies:
