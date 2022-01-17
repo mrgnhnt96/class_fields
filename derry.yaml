@@ -11,7 +11,7 @@ clean:
 sort: dart pub global run import_sorter:main
 
 prep:
-  - flutter format lib test
+  - dart format lib test
   - $sort
 
 coverage:
@@ -27,7 +27,3 @@ uploadcoverage:
 runtests:
   - dart run test --coverage coverage -r expanded --test-randomize-ordering-seed random --timeout 60s
   - $coverage
-
-publish:
-  - cd ../generator && pub publish
-  - cd ../annotation && pub publish
