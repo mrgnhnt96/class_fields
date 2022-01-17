@@ -80,7 +80,20 @@ function format() {
   dart pub global run import_sorter:main --no-comments
 }
 
+function checkAbilityToPublish(){
+  if [[ -n $(git status -s) ]]; then
+    echo ""
+    echo "--- !!! ---"
+    echo "You have uncommitted changes. Please commit or stash them before publishing."
+    echo "--- !!! ---"
+    echo ""
+    exit 1
+  fi
+}
+
 function publish() {
+  checkAbilityToPublish
+
   printf "\n"
   echo "Preparing to publish..."
 
@@ -191,6 +204,8 @@ function verifyVersionAndNotes() {
 }
 
 function createGitRelease() {
+  checkAbilityToPublish
+
   printf "\n"
 
   if [ -z "$version" ]; then
