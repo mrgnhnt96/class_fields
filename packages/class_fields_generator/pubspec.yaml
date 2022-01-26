@@ -1,6 +1,6 @@
 name: class_fields
 description: Generate all field names as Strings to use within Maps, serialization, etc.
-version: 0.1.0
+version: 0.2.0
 repository: https://github.com/mrgnhnt96/class_fields/tree/master/packages/class_fields_generator
 homepage: https://github.com/mrgnhnt96/class_fields
 
