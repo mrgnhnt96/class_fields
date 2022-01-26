@@ -2,10 +2,11 @@
 
 import 'package:analyzer/dart/element/element.dart';
 import 'package:build/build.dart';
-import 'package:class_fields/domain/class.dart';
-import 'package:class_fields/templates/fields_template.dart';
 import 'package:class_fields_annotation/src/fields.dart';
 import 'package:source_gen/source_gen.dart';
+
+import 'package:class_fields/domain/class.dart';
+import 'package:class_fields/templates/fields_template.dart';
 
 /// {@template fields_generator}
 /// A [Generator] that generates all keys for fields

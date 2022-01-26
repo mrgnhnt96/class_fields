@@ -1,8 +1,8 @@
 import 'package:generator_test/generator_test.dart';
 import 'package:test/test.dart';
 
-import 'package:class_fields/domain/settings.dart';
 import 'package:class_fields/class_fields.dart';
+import 'package:class_fields/domain/settings.dart';
 
 void main() {
   const files = [
