@@ -81,6 +81,10 @@ function format() {
 }
 
 function checkAbilityToPublish(){
+  if $dryRun; then
+    return 0
+  fi
+  
   if [[ -n $(git status -s) ]]; then
     echo ""
     echo "--- !!! ---"
