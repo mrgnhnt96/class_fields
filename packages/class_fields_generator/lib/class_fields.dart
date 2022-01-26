@@ -5,7 +5,7 @@ import 'package:class_fields/domain/settings.dart';
 import 'package:class_fields/src/generator.dart';
 
 /// Not meant to be invoked by hand-authored code.
-Builder fieldsBuilder(BuilderOptions options) {
+Builder classFieldsBuilder(BuilderOptions options) {
   final settings = Settings.fromConfig(options.config);
 
   Formatter? formatter = (s) => s;

@@ -2,7 +2,7 @@ import 'package:generator_test/generator_test.dart';
 import 'package:test/test.dart';
 
 import 'package:class_fields/domain/settings.dart';
-import 'package:class_fields/fields.dart';
+import 'package:class_fields/class_fields.dart';
 
 void main() {
   const files = [
@@ -19,7 +19,7 @@ void main() {
       () async {
         final tester = SuccessGenerator.fromBuilder(
           file,
-          fieldsBuilder,
+          classFieldsBuilder,
           onLog: print,
           logLevel: Level.ALL,
           options: Settings.debug(),

@@ -1,11 +1,12 @@
 builders:
-  fields:
-    import: "package:fields/fields.dart"
+  class_fields:
+    import: "package:class_fields/class_fields.dart"
     builder_factories:
-      - fieldsBuilder
+      - classFieldsBuilder
     build_extensions:
       .dart:
         - class_fields.g.part
     auto_apply: dependents
     build_to: cache
-    applies_builders: ["source_gen|combining_builder"]
+    applies_builders:
+      - "source_gen|combining_builder"
